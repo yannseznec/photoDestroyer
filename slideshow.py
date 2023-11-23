@@ -2,7 +2,7 @@
 import time
 import os
 
-print(“Slideshow running soon…”)
+print("Slideshow running soon…")
 time.sleep(10)
 os.system(“feh -Y -x -q -D 7 -B black -F -Z -r /media/”)
 

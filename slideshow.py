@@ -2,11 +2,13 @@
 import time
 import os
 import random
+import threading
 
 def displayDestroy():
+  threading.Timer(5.0, displayDestroy).start()
   random_file=random.choice(os.listdir("photos"))
   print(random_file)
-  time.sleep(1)
   os.system("feh -F photos/"+random_file)
+
 
 displayDestroy()

@@ -5,7 +5,6 @@ import random
 import threading
 
 def displayDestroy():
-  os.system("killall feh")
   threading.Timer(5.0, displayDestroy).start()
   random_file=random.choice(os.listdir("photos"))
   print(random_file)

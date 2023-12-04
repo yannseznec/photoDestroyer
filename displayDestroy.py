@@ -11,6 +11,6 @@ def displayDestroy():
   os.system("feh -F "+random_file)
   time.sleep(3.0)
   os.system("convert -resize 10% -filter Point -resize 1000% -filter Point "+random_file+" "+random_file)
-  os.system("sudo killall feh")
+  os.system("pkill feh")
   
 displayDestroy()

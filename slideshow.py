@@ -10,6 +10,7 @@ def displayDestroy():
   print(random_file)
   os.system("feh -F photos/"+random_file)
   os.system("killall feh")
+  os.system("rm photos"+random_file)
 
 
 displayDestroy()

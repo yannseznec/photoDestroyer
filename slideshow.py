@@ -1,10 +1,12 @@
 # !/bin/python
 import time
 import os
+import random
 
 print("Slideshow running soon…")
-time.sleep(10)
-os.system("feh -Y -x -q -D 7 -B black -F -Z -r /media/")
+random_file=random.choice(os.listdir("photos"))
+time.sleep(1)
+os.system("feh -F photos/test.jpeg")
 
 while 1:
   time.sleep(1)

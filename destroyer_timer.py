@@ -30,7 +30,7 @@ def timeCounter():
 
 def randomImage():
   global random_file
-  random_file="../usb/photos/"+random.choice(os.listdir("photos"))
+  random_file="../usb/photos/"+random.choice(os.listdir("../usb/photos/"))
 
 
 

@@ -21,7 +21,7 @@ def timeCounter():
   os.system("convert -resize "+resize1+"% -resize "+resize2+"% "+random_file+" "+random_file)
   event.wait(8)
   print(resize1)
-  if currentTime > displayTime:
+  if resize1 < 2:
     os.system("rm "+random_file)
     print("deleted")
     randomImage()

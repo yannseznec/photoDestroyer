@@ -18,7 +18,7 @@ def timeCounter():
   currentTime+=3
   resize1 = str((1/currentTime)*100)
   resize2 = str(currentTime*100)
-  os.system("feh -F --hidepointer --reload=3 "+random_file + "&")
+  os.system("feh -F --hide-pointer --reload=3 "+random_file + "&")
   os.system("convert -resize "+resize1+"% -resize "+resize2+"% "+random_file+" "+random_file)
   event.wait(4)
   print(resize1)

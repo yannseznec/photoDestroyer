@@ -30,7 +30,7 @@ def timeCounter():
 
 def randomImage():
   global random_file
-  random_file="photos/"+random.choice(os.listdir("photos"))
+  random_file="/dev/sda/photos/"+random.choice(os.listdir("photos"))
 
 
 

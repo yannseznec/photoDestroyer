@@ -32,9 +32,9 @@ def timeCounter():
 
 def randomImage():
   global random_file
-  random_file="../usb/photos/"+random.choice(os.listdir("../usb/photos/"))
+  # random_file="../usb/photos/"+random.choice(os.listdir("../usb/photos/"))
   # running from a USB stick seems to make it freeze, maybe need a better stick?
-  # random_file="photos/"+random.choice(os.listdir("photos"))
+  random_file="photos/"+random.choice(os.listdir("photos"))
   print(random_file)
 
 

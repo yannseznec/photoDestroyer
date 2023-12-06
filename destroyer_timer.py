@@ -6,7 +6,7 @@ import threading
 
 currentTime = 0
 rate = 5
-displayTime = 3
+displayTime = 100
 random_file = "imagename"
 
 def timeCounter():
@@ -25,7 +25,7 @@ def timeCounter():
     os.system("rm "+random_file)
     print("deleted")
     randomImage()
-    os.system("feh --reload=3 "+random_file + "&")
+    os.system("feh -F --hide-pointer --reload=3 "+random_file + "&")
     currentTime = 0
     
 
@@ -41,5 +41,5 @@ def randomImage():
 
 
 randomImage()
-os.system("feh --reload=3 "+random_file + "&")
+os.system("feh -F --hide-pointer --reload=3 "+random_file + "&")
 timeCounter()

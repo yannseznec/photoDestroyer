@@ -5,7 +5,7 @@ import random
 import threading
 
 currentTime = 0
-rate = 5
+rate = 10
 displayTime = 100
 random_file = "imagename"
 
@@ -15,11 +15,11 @@ def timeCounter():
   global displayTime
   threading.Timer(rate, timeCounter).start()
   event = threading.Event()
-  currentTime+=3
+  currentTime+=1
   resize1 = str((1/currentTime)*100)
   resize2 = str(currentTime*100)
   os.system("convert -resize "+resize1+"% -resize "+resize2+"% "+random_file+" "+random_file)
-  event.wait(4)
+  event.wait(8)
   print(resize1)
   if currentTime > displayTime:
     os.system("rm "+random_file)
@@ -32,9 +32,9 @@ def timeCounter():
 
 def randomImage():
   global random_file
-  # random_file="../usb/photos/"+random.choice(os.listdir("../usb/photos"))
+  random_file="../usb/photos/"+random.choice(os.listdir("../usb/photos/"))
   # running from a USB stick seems to make it freeze, maybe need a better stick?
-  random_file="photos/"+random.choice(os.listdir("photos"))
+  # random_file="photos/"+random.choice(os.listdir("photos"))
   print(random_file)
 
 

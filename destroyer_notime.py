@@ -49,5 +49,5 @@ def randomImage():
 randomImage()
 # os.system("feh -F -R --hide-pointer "+random_file + "&")
 # os.system("feh -F --hide-pointer --reload=2 "+random_file + "&")
-os.system("display "+random_file + "&")
+os.system("display -update 1"+random_file + "&")
 timeCounter()

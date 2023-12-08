@@ -21,13 +21,13 @@ def timeCounter():
     print("deleted")
     randomImage()
     currentTime = 0
-    os.system("feh -F --hide-pointer --reload=2 "+random_file + "&")
+   # os.system("feh -F --hide-pointer --reload=2 "+random_file + "&")
     timeCounter()
   if currentTime < newTime:
     currentTime+=1
     resize1 = str((1/currentTime)*100)
     resize2 = str(currentTime*100)
-    os.system("convert -resize "+resize1+"% -resize "+resize2+"% "+random_file+" "+random_file)
+   # os.system("convert -resize "+resize1+"% -resize "+resize2+"% "+random_file+" "+random_file)
     newTime = currentTime + 1
     print(currentTime)
     time.sleep(2)
@@ -48,5 +48,6 @@ def randomImage():
 
 randomImage()
 # os.system("feh -F -R --hide-pointer "+random_file + "&")
-os.system("feh -F --hide-pointer --reload=2 "+random_file + "&")
+# os.system("feh -F --hide-pointer --reload=2 "+random_file + "&")
+os.system("magick display "+random_file + "&")
 timeCounter()

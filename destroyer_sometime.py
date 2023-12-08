@@ -17,13 +17,13 @@ def timeCounter():
   global displayTime
   global newTime
   event = threading.Event()
-  if currentTime > 10:
+  if currentTime > 50: # set the maximum destruction amount before deletion here (multiply by 10 for number of seconds)
     os.system("rm "+random_file)
     print("deleted")
     randomImage()
     currentTime = 0
     displayImage()
-    event.wait(4)
+    event.wait(10)
     timeCounter()
   if currentTime < newTime:
     currentTime+=1
@@ -47,7 +47,7 @@ def randomImage():
 
 
 def displayImage():
-  os.system("feh --hide-pointer --reload=10 "+random_file + "&")
+  os.system("feh -F --hide-pointer --reload=1 "+random_file + "&")
   # os.system("feh -F -R --hide-pointer "+random_file + "&")
 
 randomImage()
